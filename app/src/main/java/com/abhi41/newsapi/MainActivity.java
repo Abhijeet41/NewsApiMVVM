@@ -87,26 +87,5 @@ public class MainActivity extends AppCompatActivity {
                 }));
     }
 
-    private void InsertArticleInDB(List<Article> articleList) {
-        for (int i = 0; i < articleList.size(); i++) {
-            Article article = articleList.get(i);
-
-            CompositeDisposable compositeDisposable = new CompositeDisposable();
-            compositeDisposable.add(database.articleDao().insertNote(article)
-                    .subscribeOn(AndroidSchedulers.mainThread())
-                    .doOnError(throwable -> {
-                        Log.d(TAG, "doOnError: "+throwable.getMessage());
-                    }).subscribe(
-                            () -> {
-                                Log.d(TAG, "InsertArticleInDB: ");
-                                compositeDisposable.dispose();
-                            }
-                    ));
-        }
-
-
-
-
-    }
 
 }

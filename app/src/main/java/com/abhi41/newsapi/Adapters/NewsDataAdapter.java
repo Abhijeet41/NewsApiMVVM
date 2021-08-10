@@ -38,9 +38,6 @@ public class NewsDataAdapter extends RecyclerView.Adapter<NewsDataAdapter.ViewHo
 
     private List<Article> articleArrayList;
     private LayoutInflater inflater;
-
-    public static final int MAX_LINES = 2;
-    public static final String TWO_SPACES = " ";
     private Context context;
 
     public NewsDataAdapter(List<Article> articleArrayList, MainActivity mainActivity) {
@@ -68,17 +65,6 @@ public class NewsDataAdapter extends RecyclerView.Adapter<NewsDataAdapter.ViewHo
         holder.layoutBinding.txtNewsTitle.setText(article.getAuthor());
         try {
             holder.layoutBinding.txtNewsDescription.setText(article.getDescription());
-
-            //if (holder.layoutBinding.txtNewsDescription.getLayout().getLineCount() > 2) {
-
-     /*       if (1 > 2) {
-
-                holder.layoutBinding.textReadMore.setVisibility(View.VISIBLE);
-
-            } else {
-                holder.layoutBinding.textReadMore.setVisibility(View.GONE);
-            }
-*/
 
 
             holder.layoutBinding.txtNewsDescription.post(new Runnable() {
@@ -136,9 +122,7 @@ public class NewsDataAdapter extends RecyclerView.Adapter<NewsDataAdapter.ViewHo
     public class ViewHolder extends RecyclerView.ViewHolder {
 
         private SingleNewsLayoutBinding layoutBinding;
-/*
-        private TextView txt_news_title,txtDate,txt_news_description;
-*/
+
 
         public ViewHolder(@NonNull @NotNull SingleNewsLayoutBinding itemView) {
             super(itemView.getRoot());

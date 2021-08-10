@@ -94,12 +94,11 @@ public class NewsRepository {
     }
 
     private void InsertArticleInDB(List<Article> articleList) {
-        Article article = null;
+
         for (int i = 0; i < articleList.size(); i++) {
-            article = articleList.get(i);
-        }
+
             CompositeDisposable compositeDisposable = new CompositeDisposable();
-            compositeDisposable.add(database.articleDao().insertNote(article)
+            compositeDisposable.add(database.articleDao().insertNote(articleList.get(i))
                     .subscribeOn(AndroidSchedulers.mainThread())
                     .doOnError(throwable -> {
                         Log.d(TAG, "doOnError: "+throwable.getMessage());
@@ -109,6 +108,8 @@ public class NewsRepository {
                                 compositeDisposable.dispose();
                             }
                     ));
+        }
+
 
 
 

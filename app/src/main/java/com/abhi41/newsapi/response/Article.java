@@ -15,11 +15,12 @@ import java.io.Serializable;
 @Entity(tableName = "Article")
 public class Article implements Serializable{
 
+    @PrimaryKey(autoGenerate = true)
+    @ColumnInfo(name = "id")
+    private int id = 0;
 
-    @PrimaryKey
     @ColumnInfo(name = "assetName")
     @Expose
-    @NonNull
     private String author;
 
     @ColumnInfo(name = "description")
@@ -37,6 +38,14 @@ public class Article implements Serializable{
 
     @Expose
     private String urlToImage;
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
 
     public String getAuthor() {
         return author;
