@@ -16,11 +16,11 @@ import io.reactivex.Flowable;
 @Dao
 public interface NewsDao {
 
-  /*  @Query("SELECT * FROM Asset")
-    Flowable<List<Article>> getAllAssetList();
+    @Query("SELECT * FROM Article")
+    Flowable<List<Article>> getAllArticleList();
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    Completable insertNote(Article asset);*/
+    Completable insertNote(Article asset);
 
 
 }

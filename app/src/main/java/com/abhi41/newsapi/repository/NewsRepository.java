@@ -1,6 +1,8 @@
 package com.abhi41.newsapi.repository;
 
 import android.app.Application;
+import android.os.AsyncTask;
+import android.util.Log;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
@@ -8,6 +10,7 @@ import androidx.lifecycle.MutableLiveData;
 import com.abhi41.newsapi.response.Article;
 import com.abhi41.newsapi.retrofit.ApiService;
 import com.abhi41.newsapi.retrofit.RetrofitClient;
+import com.abhi41.newsapi.room_db.dao.database.ArticleDatabase;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 
@@ -33,27 +36,23 @@ public class NewsRepository {
 
     ApiService apiService;
     CompositeDisposable compositeDisposable = new CompositeDisposable();
-
+    ArticleDatabase database;
     List<Article> articleList = new ArrayList<>();
 
 
     public NewsRepository(Application application) {
         apiService = RetrofitClient.getRetrofitCLient();
-
+        database = ArticleDatabase.getDb_article(application);
     }
-
-
 
     public LiveData<List<Article>> apiSendData() {
 
         HashMap<String, String> hashMap = new HashMap<>();
         hashMap.put("country", "us");
         hashMap.put("category", "business");
-        /*hashMap.put("apiKey", "444ad0895ee94130972d070cead5fcb3");
-*/
         MutableLiveData<List<Article>> data = new MutableLiveData<>();
 
-        compositeDisposable.add(apiService.news_list("us","business")
+        compositeDisposable.add(apiService.news_list("us", "business")
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribeWith(new DisposableSingleObserver<String>() {
@@ -70,9 +69,13 @@ public class NewsRepository {
 
                             Gson gson = new Gson();
                             String jsonOutput = String.valueOf(jsonArray);
-                            Type listType = new TypeToken<List<Article>>(){}.getType();
-                            articleList = gson.fromJson(jsonOutput,listType);
+                            Type listType = new TypeToken<List<Article>>() {
+                            }.getType();
+                            articleList = gson.fromJson(jsonOutput, listType);
                             data.setValue(articleList);
+
+                            InsertArticleInDB(articleList);
+
                         } catch (JSONException e) {
                             e.printStackTrace();
                         }
@@ -89,4 +92,27 @@ public class NewsRepository {
         return data;
 
     }
+
+    private void InsertArticleInDB(List<Article> articleList) {
+        Article article = null;
+        for (int i = 0; i < articleList.size(); i++) {
+            article = articleList.get(i);
+        }
+            CompositeDisposable compositeDisposable = new CompositeDisposable();
+            compositeDisposable.add(database.articleDao().insertNote(article)
+                    .subscribeOn(AndroidSchedulers.mainThread())
+                    .doOnError(throwable -> {
+                        Log.d(TAG, "doOnError: "+throwable.getMessage());
+                    }).subscribe(
+                            () -> {
+                                Log.d(TAG, "InsertArticleInDB: ");
+                                compositeDisposable.dispose();
+                            }
+                    ));
+
+
+
+    }
+
+
 }

@@ -2,35 +2,38 @@
 package com.abhi41.newsapi.response;
 
 
+import androidx.annotation.NonNull;
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
+import androidx.room.PrimaryKey;
 
 import com.google.gson.annotations.Expose;
 
 import java.io.Serializable;
 
 @SuppressWarnings("unused")
-public class Article {
+@Entity(tableName = "Article")
+public class Article implements Serializable{
 
 
+    @PrimaryKey
+    @ColumnInfo(name = "assetName")
     @Expose
+    @NonNull
     private String author;
-    @Expose
-    private String content;
 
+    @ColumnInfo(name = "description")
     @Expose
     private String description;
 
+    @ColumnInfo(name = "publishedAt")
     @Expose
     private String publishedAt;
 
-    @Expose
-    private Source source;
-
+    @ColumnInfo(name = "title")
     @Expose
     private String title;
-    @Expose
-    private String url;
+
 
     @Expose
     private String urlToImage;
@@ -43,13 +46,6 @@ public class Article {
         this.author = author;
     }
 
-    public String getContent() {
-        return content;
-    }
-
-    public void setContent(String content) {
-        this.content = content;
-    }
 
     public String getDescription() {
         return description;
@@ -67,13 +63,6 @@ public class Article {
         this.publishedAt = publishedAt;
     }
 
-    public Source getSource() {
-        return source;
-    }
-
-    public void setSource(Source source) {
-        this.source = source;
-    }
 
     public String getTitle() {
         return title;
@@ -83,13 +72,6 @@ public class Article {
         this.title = title;
     }
 
-    public String getUrl() {
-        return url;
-    }
-
-    public void setUrl(String url) {
-        this.url = url;
-    }
 
     public String getUrlToImage() {
         return urlToImage;
