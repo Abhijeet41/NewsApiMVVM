@@ -79,17 +79,6 @@ public class NewsDataAdapter extends RecyclerView.Adapter<NewsDataAdapter.ViewHo
                 holder.layoutBinding.textReadMore.setVisibility(View.GONE);
             }
 */
-         /*   holder.layoutBinding.txtNewsDescription.getViewTreeObserver().addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener() {
-                @Override
-                public void onGlobalLayout() {
-                    if (holder.layoutBinding.txtNewsDescription.getLineCount() > 2) {
-                        holder.layoutBinding.textReadMore.setVisibility(View.VISIBLE);
-                        holder.layoutBinding.txtNewsDescription.getViewTreeObserver().removeOnGlobalLayoutListener(this);
-                    }else {
-                        holder.layoutBinding.textReadMore.setVisibility(View.GONE);
-                    }
-                }
-            });*/
 
 
             holder.layoutBinding.txtNewsDescription.post(new Runnable() {
@@ -97,9 +86,10 @@ public class NewsDataAdapter extends RecyclerView.Adapter<NewsDataAdapter.ViewHo
                 public void run() {
                     Log.d("numChars", String.valueOf(holder.layoutBinding.txtNewsDescription.getLineCount()));
 
-                    if (holder.layoutBinding.txtNewsDescription.getLineCount() < 2 ) {
+                    if (holder.layoutBinding.txtNewsDescription.getLineCount() < 2 &&
+                            holder.layoutBinding.txtNewsDescription.getEllipsize() == TextUtils.TruncateAt.END) {
                         holder.layoutBinding.textReadMore.setVisibility(View.GONE);
-                    }else {
+                    } else {
                         holder.layoutBinding.textReadMore.setVisibility(View.VISIBLE);
                     }
                 }
