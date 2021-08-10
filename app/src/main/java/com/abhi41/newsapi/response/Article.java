@@ -35,6 +35,28 @@ public class Article implements Serializable{
     @Expose
     private String title;
 
+    @ColumnInfo(name = "isLike")
+    private boolean isLike = false;
+
+    @ColumnInfo(name = "isDislike")
+    private boolean isDislike = false;
+
+
+    public boolean isLike() {
+        return isLike;
+    }
+
+    public void setLike(boolean like) {
+        isLike = like;
+    }
+
+    public boolean isDislike() {
+        return isDislike;
+    }
+
+    public void setDislike(boolean dislike) {
+        isDislike = dislike;
+    }
 
     @Expose
     private String urlToImage;

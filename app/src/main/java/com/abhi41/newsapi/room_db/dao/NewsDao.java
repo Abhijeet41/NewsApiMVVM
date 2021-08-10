@@ -23,4 +23,6 @@ public interface NewsDao {
     Completable insertNote(Article asset);
 
 
+
+
 }

@@ -1,22 +1,13 @@
 package com.abhi41.newsapi.Adapters;
 
 import android.content.Context;
-import android.graphics.Color;
-import android.os.Build;
-import android.text.Html;
-import android.text.Spannable;
-import android.text.SpannableString;
 import android.text.TextUtils;
-import android.text.style.ForegroundColorSpan;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.ViewTreeObserver;
-import android.widget.TextView;
 
 import androidx.annotation.NonNull;
-import androidx.core.text.HtmlCompat;
 import androidx.databinding.DataBindingUtil;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -24,6 +15,7 @@ import com.abhi41.newsapi.MainActivity;
 import com.abhi41.newsapi.R;
 import com.abhi41.newsapi.databinding.SingleNewsLayoutBinding;
 import com.abhi41.newsapi.response.Article;
+import com.abhi41.newsapi.room_db.dao.database.ArticleDatabase;
 import com.bumptech.glide.Glide;
 
 import org.jetbrains.annotations.NotNull;
@@ -34,15 +26,23 @@ import java.util.Date;
 import java.util.List;
 import java.util.TimeZone;
 
+import io.reactivex.android.schedulers.AndroidSchedulers;
+import io.reactivex.disposables.CompositeDisposable;
+
 public class NewsDataAdapter extends RecyclerView.Adapter<NewsDataAdapter.ViewHolder> {
 
     private List<Article> articleArrayList;
     private LayoutInflater inflater;
     private Context context;
+    private boolean isLiked = false;
+    private boolean isDisLiked = false;
+    ArticleDatabase database;
+    private static final String TAG = "NewsDataAdapter";
 
     public NewsDataAdapter(List<Article> articleArrayList, MainActivity mainActivity) {
         this.articleArrayList = articleArrayList;
         this.context = mainActivity;
+        database = ArticleDatabase.getDb_article(context);
     }
 
     @NonNull
@@ -77,6 +77,53 @@ public class NewsDataAdapter extends RecyclerView.Adapter<NewsDataAdapter.ViewHo
                         holder.layoutBinding.textReadMore.setVisibility(View.GONE);
                     } else {
                         holder.layoutBinding.textReadMore.setVisibility(View.VISIBLE);
+                    }
+                }
+            });
+
+            if (articleArrayList.get(position).isLike()) {
+                holder.layoutBinding.imgLike.setBackground(context.getDrawable(R.drawable.ic_like));
+
+            } else {
+
+                holder.layoutBinding.imgLike.setBackground(context.getDrawable(R.drawable.ic_like_outlined));
+            }
+
+            if (articleArrayList.get(position).isDislike()) {
+
+                holder.layoutBinding.imageDislike.setBackground(context.getDrawable(R.drawable.ic_dislike));
+            } else {
+
+                holder.layoutBinding.imageDislike.setBackground(context.getDrawable(R.drawable.ic_dislike_outline));
+            }
+
+
+            holder.layoutBinding.imgLike.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    if (articleArrayList.get(position).isLike()) {
+                        articleArrayList.get(position).setLike(false);
+                        holder.layoutBinding.imgLike.setBackground(context.getDrawable(R.drawable.ic_like));
+                        insertLikeInDb(article);
+                    } else {
+                        articleArrayList.get(position).setLike(true);
+                        insertLikeInDb(article);
+                        holder.layoutBinding.imgLike.setBackground(context.getDrawable(R.drawable.ic_like_outlined));
+                    }
+                }
+            });
+
+            holder.layoutBinding.imageDislike.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    if (articleArrayList.get(position).isDislike()) {
+                        articleArrayList.get(position).setDislike(false);
+                        insertLikeInDb(article);
+                        holder.layoutBinding.imageDislike.setBackground(context.getDrawable(R.drawable.ic_dislike));
+                    } else {
+                        articleArrayList.get(position).setDislike(true);
+                        insertLikeInDb(article);
+                        holder.layoutBinding.imageDislike.setBackground(context.getDrawable(R.drawable.ic_dislike_outline));
                     }
                 }
             });
@@ -130,5 +177,19 @@ public class NewsDataAdapter extends RecyclerView.Adapter<NewsDataAdapter.ViewHo
 
         }
 
+    }
+
+    private void insertLikeInDb(Article article){
+        CompositeDisposable compositeDisposable = new CompositeDisposable();
+        compositeDisposable.add(database.articleDao().insertNote(article)
+                .subscribeOn(AndroidSchedulers.mainThread())
+                .doOnError(throwable -> {
+                    Log.d(TAG, "doOnError: "+throwable.getMessage());
+                }).subscribe(
+                        () -> {
+                            Log.d(TAG, "InsertArticleInDB: ");
+                            compositeDisposable.dispose();
+                        }
+                ));
     }
 }
