@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">NewsApi</string>
+    <string name="news_title">News Title</string>
+    <string name="date">date</string>
+    <string name="description">description</string>
+    <string name="show_less">show less</string>
+</resources>
