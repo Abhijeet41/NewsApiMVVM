@@ -56,10 +56,6 @@ public class NewsRepository {
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribeWith(new DisposableSingleObserver<String>() {
-                /*    @Override
-                    public void onNext(@NotNull List<Article> articles) {
-                        data.setValue(articles);
-                    }*/
 
                     @Override
                     public void onSuccess(@NotNull String response) {
@@ -95,10 +91,9 @@ public class NewsRepository {
 
     private void InsertArticleInDB(List<Article> articleList) {
 
-        for (int i = 0; i < articleList.size(); i++) {
-
+        for (Article article : articleList) {
             CompositeDisposable compositeDisposable = new CompositeDisposable();
-            compositeDisposable.add(database.articleDao().insertNote(articleList.get(i))
+            compositeDisposable.add(database.articleDao().insertNote(article)
                     .subscribeOn(AndroidSchedulers.mainThread())
                     .doOnError(throwable -> {
                         Log.d(TAG, "doOnError: "+throwable.getMessage());
@@ -109,9 +104,6 @@ public class NewsRepository {
                             }
                     ));
         }
-
-
-
 
     }
 

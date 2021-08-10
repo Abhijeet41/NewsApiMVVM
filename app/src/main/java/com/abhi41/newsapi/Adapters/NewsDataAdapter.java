@@ -34,8 +34,6 @@ public class NewsDataAdapter extends RecyclerView.Adapter<NewsDataAdapter.ViewHo
     private List<Article> articleArrayList;
     private LayoutInflater inflater;
     private Context context;
-    private boolean isLiked = false;
-    private boolean isDisLiked = false;
     ArticleDatabase database;
     private static final String TAG = "NewsDataAdapter";
 
@@ -83,17 +81,13 @@ public class NewsDataAdapter extends RecyclerView.Adapter<NewsDataAdapter.ViewHo
 
             if (articleArrayList.get(position).isLike()) {
                 holder.layoutBinding.imgLike.setBackground(context.getDrawable(R.drawable.ic_like));
-
             } else {
-
                 holder.layoutBinding.imgLike.setBackground(context.getDrawable(R.drawable.ic_like_outlined));
             }
 
             if (articleArrayList.get(position).isDislike()) {
-
                 holder.layoutBinding.imageDislike.setBackground(context.getDrawable(R.drawable.ic_dislike));
             } else {
-
                 holder.layoutBinding.imageDislike.setBackground(context.getDrawable(R.drawable.ic_dislike_outline));
             }
 
