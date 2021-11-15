@@ -2,14 +2,20 @@
 package com.abhi41.newsapi.response;
 
 
+import android.widget.ImageView;
+
 import androidx.annotation.NonNull;
+import androidx.databinding.BindingAdapter;
+import androidx.recyclerview.widget.DiffUtil;
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
+import com.bumptech.glide.Glide;
 import com.google.gson.annotations.Expose;
 
 import java.io.Serializable;
+import java.util.Objects;
 
 @SuppressWarnings("unused")
 @Entity(tableName = "Article")
@@ -111,5 +117,36 @@ public class Article implements Serializable{
     public void setUrlToImage(String urlToImage) {
         this.urlToImage = urlToImage;
     }
+
+
+    @BindingAdapter("android:loadImage")
+    public static void loadImage(ImageView imageView,String url){
+        Glide.with(imageView)
+                .load(url)
+                .into(imageView);
+    }
+
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Article article = (Article) o;
+        return getId() == article.getId() && isLike() == article.isLike() && isDislike() == article.isDislike() && Objects.equals(getAuthor(), article.getAuthor()) && Objects.equals(getDescription(), article.getDescription()) && Objects.equals(getPublishedAt(), article.getPublishedAt()) && Objects.equals(getTitle(), article.getTitle()) && Objects.equals(getUrlToImage(), article.getUrlToImage());
+    }
+
+
+
+    public static DiffUtil.ItemCallback<Article> itemCallback = new DiffUtil.ItemCallback<Article>() {
+        @Override
+        public boolean areItemsTheSame(@NonNull Article oldItem, @NonNull Article newItem) {
+            return String.valueOf(oldItem.getId()).equals(String.valueOf(newItem.getId()));
+        }
+
+        @Override
+        public boolean areContentsTheSame(@NonNull Article oldItem, @NonNull Article newItem) {
+            return oldItem.equals(newItem);
+        }
+    };
 
 }

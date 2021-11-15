@@ -12,18 +12,27 @@ import com.abhi41.newsapi.room_db.dao.NewsDao;
 @Database(entities = Article.class, version = 1, exportSchema = false)
 public abstract class ArticleDatabase extends RoomDatabase {
 
-    private static ArticleDatabase db_article;
+    private static volatile ArticleDatabase db_article;
 
     public static synchronized ArticleDatabase getDb_article(Context context) {
 
         if (db_article == null) {
-            db_article = Room.databaseBuilder(context, ArticleDatabase.class, "article_db")
-                    .fallbackToDestructiveMigration()
-                    .allowMainThreadQueries()
-                    .build();
+            synchronized (ArticleDatabase.class)
+            {
+                if (db_article == null) {
+                    db_article = Room.databaseBuilder(context, ArticleDatabase.class, "article_db")
+                            .fallbackToDestructiveMigration()
+                            .allowMainThreadQueries()
+                            .build();
+                }
+            }
+
         }
         return db_article;
 
+    }
+    protected Object readResolve() {
+        return db_article;
     }
     public abstract NewsDao articleDao();
 

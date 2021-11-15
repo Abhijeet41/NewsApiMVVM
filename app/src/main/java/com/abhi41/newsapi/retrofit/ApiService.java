@@ -22,4 +22,6 @@ public interface ApiService {
     @GET("top-headlines")
     Single<String> news_list(@Query("country")String country, @Query("category")String category);
 
+
+
 }

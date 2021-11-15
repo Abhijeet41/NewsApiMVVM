@@ -1,6 +1,7 @@
 
 package com.abhi41.newsapi.response;
 
+import java.io.Serializable;
 import java.util.List;
 import com.google.gson.annotations.Expose;
 

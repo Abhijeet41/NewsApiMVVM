@@ -13,6 +13,256 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/../../CODING WITH MITCH/Local-db-Cache-Retrofit-REST-API-MVVM-2663024d9b0b53110030ad6abd10f97a2be16104/app/src/main/java/com/codingwithmitch/foodrecipes/models/Recipe.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../CODING WITH MITCH/Local-db-Cache-Retrofit-REST-API-MVVM-2663024d9b0b53110030ad6abd10f97a2be16104/app/src/main/java/com/codingwithmitch/foodrecipes/persistence/Converters.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../CODING WITH MITCH/Local-db-Cache-Retrofit-REST-API-MVVM-2663024d9b0b53110030ad6abd10f97a2be16104/app/src/main/java/com/codingwithmitch/foodrecipes/persistence/RecipeDatabase.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../Calculate Distance/app/build.gradle">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../Calculate Distance/app/src/main/AndroidManifest.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../Calculate Distance/app/src/main/java/com/abhi41/calculatedistance/MainActivity.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../Calculate Distance/app/src/main/java/com/abhi41/calculatedistance/model/OverviewPolyline.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../Calculate Distance/app/src/main/java/com/abhi41/calculatedistance/model/Result.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../Calculate Distance/app/src/main/java/com/abhi41/calculatedistance/model/Route.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../Calculate Distance/app/src/main/java/com/abhi41/calculatedistance/retrofit/ApiService.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../Calculate Distance/app/src/main/java/com/abhi41/calculatedistance/retrofit/RetrofitClient.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../Calculate Distance/app/src/main/java/com/abhi41/calculatedistance/viewmodel/DirectionViewModel.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../Dagger2 youtube mayank/app/build.gradle">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../Dagger2 youtube mayank/app/src/main/AndroidManifest.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../Dagger2 youtube mayank/app/src/main/java/com/abhi41/dagger2withmayank/MainActivity.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../Dagger2 youtube mayank/app/src/main/java/com/abhi41/dagger2withmayank/component/MobileComponent.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../Dagger2 youtube mayank/app/src/main/java/com/abhi41/dagger2withmayank/model/Battery.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../Dagger2 youtube mayank/app/src/main/java/com/abhi41/dagger2withmayank/model/Charger.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../Dagger2 youtube mayank/app/src/main/java/com/abhi41/dagger2withmayank/model/Mobile.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../Dagger2 youtube mayank/app/src/main/java/com/abhi41/dagger2withmayank/model/Proccessor.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../Dagger2 youtube mayank/app/src/main/java/com/abhi41/dagger2withmayank/model/modules/BatteryModule.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../Dagger2 youtube mayank/app/src/main/java/com/abhi41/dagger2withmayank/model/modules_providers/Cobalt.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../Dagger2 youtube mayank/app/src/main/java/com/abhi41/dagger2withmayank/model/modules_providers/Lithium.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../Dagger2 youtube mayank/app/src/main/java/com/abhi41/dagger2withmayank/util/MyApplication.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../Dagger2 youtube mayank/gradle.properties">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../Health Kart/app/build.gradle">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../Health Kart/app/src/main/AndroidManifest.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../Health Kart/app/src/main/java/com/abhi41/healthkart/adapters/ArticleAdapter.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../Health Kart/app/src/main/java/com/abhi41/healthkart/model/ArticlesItem.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../Health Kart/app/src/main/java/com/abhi41/healthkart/model/SingleArticle.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../Health Kart/app/src/main/java/com/abhi41/healthkart/network_operation/ApiClient.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../Health Kart/app/src/main/java/com/abhi41/healthkart/network_operation/ApiService.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../Health Kart/app/src/main/java/com/abhi41/healthkart/repository/Articlerepo.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../Health Kart/app/src/main/java/com/abhi41/healthkart/utils/MyApplication.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../Health Kart/app/src/main/java/com/abhi41/healthkart/viewmodel/ArticleViewmodel.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../Health Kart/app/src/main/java/com/abhi41/healthkart/views/ArticleDetailScreen.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../Health Kart/app/src/main/java/com/abhi41/healthkart/views/DashBoardScreen.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../Health Kart/app/src/main/java/com/abhi41/healthkart/views/Home.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../Health Kart/app/src/main/res/layout/custom_loading_dialog_layout.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../Health Kart/app/src/main/res/layout/fragment_home.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../Health Kart/app/src/main/res/layout/single_article_row.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../Health Kart/app/src/main/res/menu/detail_article_menu.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../Health Kart/app/src/main/res/menu/main_menu.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../Health Kart/app/src/main/res/navigation/navigation.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../Health Kart/app/src/main/res/xml/provider_paths.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../MVVM Tutorial/app/src/main/java/com/abhi41/mvvmpractice/DI/ApiComponent.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../MVVM Tutorial/app/src/main/java/com/abhi41/mvvmpractice/NetworkApiConfig/ApiServices.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../MVVM Tutorial/app/src/main/java/com/abhi41/mvvmpractice/ViewModel/ListViewModel.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../MVVM Tutorial/app/src/main/java/com/abhi41/mvvmpractice/utils/MyApplication.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../MVVM Tutorial/app/src/test/java/com/abhi41/mvvmpractice/ListViewmodelTest.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/app/build.gradle">
           <value>
             <set />
@@ -28,7 +278,42 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/com/abhi41/newsapi/AppExecutors.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/com/abhi41/newsapi/Common/ArcProgressIndicator.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/com/abhi41/newsapi/Common/ProgressModule.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/app/src/main/java/com/abhi41/newsapi/MainActivity.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/com/abhi41/newsapi/di/DIComponent.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/com/abhi41/newsapi/di/DaggerComponent.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/com/abhi41/newsapi/di/ProgressModule.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/com/abhi41/newsapi/di/module/ProgressModule.java">
           <value>
             <set />
           </value>
@@ -83,6 +368,16 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/com/abhi41/newsapi/util/LoadingDialog.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/com/abhi41/newsapi/util/Myapplication.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/app/src/main/java/com/abhi41/newsapi/viewmodel/NetworkInfoViewModel.java">
           <value>
             <set />
@@ -103,7 +398,17 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/res/menu/menus.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/app/src/main/res/values/strings.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/res/xml/network_security_config.xml">
           <value>
             <set />
           </value>
@@ -118,7 +423,72 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/../RoomDbAdvance/app/src/main/java/com/abhi41/roomdbadvance/Adapter/TodoListAdapter.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../Runnable,Threads,Handler/app/src/main/java/com/abhi41/runnablethread/MainActivity.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../java_shooping_cart_mvvm/app/build/generated/ap_generated_sources/debug/out/com/abhi41/java_shoopingcart/DataBinderMapperImpl.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../java_shooping_cart_mvvm/app/src/main/java/com/abhi41/java_shoopingcart/Views/MainActivity.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../java_shooping_cart_mvvm/app/src/main/res/menu/menu.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../PAMAC Projects/Asset Inventory/app/build/generated/ap_generated_sources/debug/out/com/pamac/manageasset/dagger2/components/DaggerMyComponent.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../PAMAC Projects/Asset Inventory/app/src/main/java/com/pamac/manageasset/dagger2/components/MyComponent.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../PAMAC Projects/Asset Inventory/app/src/main/java/com/pamac/manageasset/network_operation/ApiClient.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../PAMAC Projects/Asset Inventory/app/src/main/java/com/pamac/manageasset/repository/DashBoardRepository.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../PAMAC Projects/Asset Inventory/app/src/main/java/com/pamac/manageasset/repository/LoginRepository.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../PAMAC Projects/Asset Inventory/app/src/main/java/com/pamac/manageasset/utils/MyApplication.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../PAMAC Projects/Asset Inventory/app/src/main/java/com/pamac/manageasset/viewmodel/LoginViewModel.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/../../PAMAC Projects/SBM/app/src/main/java/com/example/demoapplication/Retrofit/RetrofitClient.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../shailesh project/Dagger2Complete/app/src/main/java/com/abhi41/dagger2complete/method_injection/MethodInjectionScreen.java">
           <value>
             <set />
           </value>

@@ -22,7 +22,8 @@ public interface NewsDao {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     Completable insertNote(Article asset);
 
-
+    @Query("DELETE FROM Article")
+    Completable deleteAll();
 
 
 }

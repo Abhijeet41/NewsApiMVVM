@@ -4,4 +4,6 @@
     <string name="date">date</string>
     <string name="description">description</string>
     <string name="show_less">show less</string>
+    <string name="read_less">Read Less</string>
+    <string name="read_more">Read More</string>
 </resources>
